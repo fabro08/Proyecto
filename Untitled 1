@@ -1,0 +1,21 @@
+XMLParser aParser = new XMLParser("configuracion.xml", "URL");
+		aParser.obtenerCola();
+		//System.out.println(aParser.getArchivo());
+		File directorio = new File((String) aParser.getArchivo());
+		
+		Directorios aDirectorios = new Directorios();
+		
+		String aString = aDirectorios.Dir(directorio, "");
+		
+		
+		for (int x=0;x<aDirectorios.ficheros.length;x++){ 
+			String b= String.valueOf(aDirectorios.ficheros[x]);
+			System.out.println((b));
+			Leer aParser2 = new Leer(b);
+			System.out.println(aParser2.GetHandler());
+			
+		}
+		
+	
+	
+	}
